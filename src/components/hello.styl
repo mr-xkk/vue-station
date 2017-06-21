@@ -1,0 +1,424 @@
+white=#f0f0f0
+.hello
+  width 100%
+  background url(../../static/images/new_bg.jpg) no-repeat bottom/cover
+  height 82%
+  .nav_list
+    height 100%
+    width 300px
+    background teal
+    transform translateX(-300px)
+    transition all 1s
+    position fixed
+    left 0
+    top 0
+    z-index 100
+    ul
+      height 100%
+      color #ecf3f6
+      h3
+        font 2rem/4rem "NaiYoua53957de718e57"
+        text-align center
+        height 4rem
+        position relative
+        animation zhuan 1s infinite
+        img
+          width 10%
+          position absolute
+          right 0
+          top 0
+      li:nth-child(1)
+        background #3d262a
+        height 33.33%
+        text-align center
+        font-size  1.4rem
+        line-height 1.6rem
+      li:nth-child(2)
+        background #127c56
+        height 33.33%
+        text-align center
+        font-size  1.2rem
+        line-height 1.6rem
+        h4
+          font 1.6rem/2rem "微软雅黑"
+        a
+          font-size 1.4rem
+          color #eab64d
+      li:nth-child(3)
+        text-align center
+        font-size  1.2rem
+        line-height 1.6rem
+        background #eab64d
+        height 33.33%
+        color #3d262a
+        h4
+          font 1.6rem/2rem "微软雅黑"
+        a
+          font-size 1.4rem
+          color #61105E
+      li:nth-child(4)
+        text-align center
+        font-size  1.2rem
+        line-height 1.6rem
+        background #ccc
+        height 33.33%
+        color #3d262a
+        h4
+          font 1.6rem/2rem "微软雅黑"
+        a
+          font-size 1.4rem
+          color #61105E
+  .inner_cloud
+    width 100%
+    transition all 1s
+    .share_window
+      background url(../../static/images/bg_share.jpg) no-repeat center/cover
+      position fixed
+      top 30%
+      right 0
+      width 200px
+      height 200px
+      z-index 10
+      box-sizing border-box
+      border 2px solid #ccc
+      transform translateX(200px)
+      transition all 1s
+    .share_details
+      width 50px
+      height 80px
+      position absolute
+      left -25px
+      top 30%
+      color white
+      font 2rem/2rem "微软雅黑"
+      img
+        width 50%
+    .share_close
+      width 10%
+      position absolute
+      left 0
+      top 0
+    h2
+      font 2rem/3rem "微软雅黑"
+      text-align center
+    .share_icon
+      margin 5% 0
+      display inline-block
+      height 50px
+      width 48%
+      text-align center
+      font 1.4rem/1.4rem "微软雅黑"
+      img
+        width 30%
+    .show_list
+      position fixed
+      left 3%
+      top 1%
+      display none
+      z-index 100
+      width 20%
+      transition all 1s
+      transform-origin:50% 10%;
+      &:hover
+        animation  round 3s
+      img
+        width 100%
+    @keyframes round{
+      0% {
+        transform rotate(40deg);
+      }
+      25% {
+        transform rotate(-20deg);
+      }
+      50% {
+        transform rotate(10deg);
+      }
+      100% {
+        transform rotate(0deg);
+      }
+    }
+    .x_fuzzy
+      width 100%
+      height 500px
+      background rgba(0,0,0,0.5)
+      .search_form
+        position fixed
+        top 13%
+        right 0%
+        transition all 0.5s
+        z-index 50
+        #search
+          background white
+          height 30px
+          float left
+          outline none
+          background transparent
+          border 2px solid #7BA7AB
+          border-radius 5px
+          color #7BA7AB
+          line-height 30px
+          padding-left 2%
+        input::-webkit-input-placeholder
+              color #7BA7AB
+        input::input-placeholder
+              color #7BA7AB
+        #key
+          float left
+          width 30px
+          height 100%
+          position absolute
+          border-radius 5px
+          right 0
+          top 0
+          text-align center
+          img
+            padding-top 15%
+            width 100%
+      .x_header
+        max-width 1200px
+        margin 0 auto
+        padding-top 3%
+        .x_logo img
+          width 6%
+          float left
+        ul
+          width 40%
+          float left
+          li
+            display inline-block
+            font 1.5rem "微软雅黑"
+            width 24%
+            text-align center
+            line-height 6.6rem
+            cursor pointer
+            color white
+            transition all 0.5s
+            &:hover
+                color #9ee6cf
+        a
+          line-height 6.6rem
+          display inline-block
+          float right
+          color white
+      .login
+          margin 0 2%
+          font-size 1.6rem
+      .tell
+        margin 5% auto 0
+        text-align center
+        color white
+        font 6rem/6rem "Arial"
+        overflow hidden
+        height 10rem
+        &:hover .to_left
+          opacity 1
+        &:hover .to_right
+          opacity 1
+        .to_left
+          float left
+          cursor pointer
+          opacity 0
+          transition: all 1s
+          img
+            width 25%
+        .to_right
+          float right
+          cursor pointer
+          opacity 0
+          transition: all 1s
+          img
+            width 25%
+        li
+          width 100%
+    .module
+      width 100%
+      background #c5dfc5
+      border-bottom 2px solid #dadfe3
+      .mo_item
+        float left
+        box-sizing border-box
+        width 33.33%
+        height 8rem
+        text-align left
+        text-indent 2em
+        font 2rem/8rem "华文细黑"
+        border-radius 5px
+        color #262626
+        transition all 0.5s
+        cursor pointer
+        .s_logo
+          width 20%
+          float right
+          margin 2%
+  .change
+    width 100%
+    padding-top 1%
+    .module_item
+      display inline-block
+      width 33.1%
+      background #f1c11a
+      text-align center
+      font 2rem/8rem "微软雅黑"
+      color #000
+      box-sizing border-box
+      transition all 0.5s
+      border-bottom  2px solid transparent
+      img
+        width 15%
+        display inline-block
+        float left
+        padding 3% 2%
+      &:hover
+        color #fff
+        background #83B271
+  .controll
+    margin 0 auto
+    height 70%
+    background #c5dfc5
+    background-attachment fixed
+    h1
+      font 3rem/3rem "微软雅黑"
+      text-align center
+    .con_item
+      box-shadow 10px 10px 10px rgba(0,0,0,.5)
+      float left
+      width 30%
+      margin 1.5%
+      height 290px
+      background rgba(255,255,255,0.5)
+      border-radius 5px
+      color #000
+      transition all 0.5s
+      padding-top 1%
+      box-sizing border-box
+      position relative
+      overflow hidden
+      &:hover
+        background rgba(255,255,255,0.2)
+        animation bs 2s infinite
+        .line
+          left 0
+        .line2
+          top 0
+        .line3
+          left 0
+        .line4
+          top 0
+      .line
+        height 3px
+        width 100%
+        background #faf15d
+        position absolute
+        left -100%
+        top 0
+        transition all 0.5s
+      .line2
+        height 100%
+        width 3px
+        background #faf15d
+        position absolute
+        left 0
+        top -100%
+        transition all 0.5s 0.5s
+      .line3
+        height 3px
+        width 100%
+        background #cb8589
+        position absolute
+        left -100%
+        bottom 0
+        transition all 0.5s 1s
+      .line4
+        height 100%
+        width 3px
+        background #cb8589
+        position absolute
+        right 0
+        top -100%
+        transition all 0.5s 1.5s
+      p
+        font 2rem/2rem "微软雅黑"
+        text-align center
+        color #1396d9
+      pre
+        font 1.6rem/1rem "微软雅黑"
+        span
+          color tomato
+  @-moz-keyframes bs {
+    0% {
+      box-shadow: inset -1px 1px 3px 2px #444444, inset 1px -1px 3px 2px #222222, 0 0 0px 0 #b2ff1a;
+    }
+
+    50% {
+      box-shadow: inset -1px 1px 3px 2px #444444, inset 1px -1px 3px 2px #222222, 0 0 20px 0 #1affff;
+    }
+
+    100% {
+      box-shadow: inset -1px 1px 3px 2px #444444, inset 1px -1px 3px 2px #222222, 0 0 0px 0 #b2ff1a;
+    }
+  }
+  @-o-keyframes bs {
+    0% {
+      box-shadow: inset -1px 1px 3px 2px #444444, inset 1px -1px 3px 2px #222222, 0 0 0px 0 #b2ff1a;
+    }
+
+    50% {
+      box-shadow: inset -1px 1px 3px 2px #444444, inset 1px -1px 3px 2px #222222, 0 0 20px 0 #1affff;
+    }
+
+    100% {
+      box-shadow: inset -1px 1px 3px 2px #444444, inset 1px -1px 3px 2px #222222, 0 0 0px 0 #b2ff1a;
+    }
+  }
+  @keyframes bs {
+    0% {
+      box-shadow: inset -1px 1px 3px 2px #444444, inset 1px -1px 3px 2px #222222, 0 0 0px 0 #b2ff1a;
+    }
+
+    50% {
+      box-shadow: inset -1px 1px 3px 2px #444444, inset 1px -1px 3px 2px #222222, 0 0 20px 0 #1affff;
+    }
+
+    100% {
+      box-shadow: inset -1px 1px 3px 2px #444444, inset 1px -1px 3px 2px #222222, 0 0 0px 0 #b2ff1a;
+    }
+  }
+  .footer
+    background #2c2c2c
+    height 30%
+    color #ccc
+    position relative
+    .inner
+      max-width 1200px
+      margin 0 auto
+      .pic
+        padding-top 5%
+        float left
+        text-align center
+        img
+          width 50%
+      ul
+        padding-left 17%
+        li
+          font 1.6rem/5rem "华文细黑"
+          letter-spacing 2px
+          border 1px solid transparent
+          box-sizing border-box
+          border-radius 5px
+          position relative
+          img
+            width 5%
+            padding-right 2%
+            vertical-align middle
+    .back_top
+        position absolute
+        right 3%
+        bottom 5%
+        text-align right
+        img
+          width 50%
+          transition all 2s
+          filter: grayscale(1);
+          &:hover
+            filter: grayscale(0);
+
