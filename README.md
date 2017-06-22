@@ -5,7 +5,7 @@
 ## Build Setup
 
 # 项目介绍
-## 这是一个用`vue-cli`脚手架工具搭建的一个类似个人主页的项目,主要是体现`vue-route`r的使用和一些`vue`和`ea6`语法的使用,同时也介绍了`jade`和`stylus`等环境的搭建与使用;
+## 这是一个用`vue-cli`脚手架工具搭建的一个类似个人主页的项目,主要是体现`vue-router`的使用和一些`vue`和`ea6`语法的使用,同时也介绍了`jade`和`stylus`等环境的搭建与使用;
  
 ``` bash
 # install dependencies
