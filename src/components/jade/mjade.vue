@@ -136,7 +136,7 @@
         </p>
       </div>
       <h2 style="font-family:华文细黑;font-size: 1.8rem;text-align: center;line-height: 2.2rem;text-indent: 2em">以上只是让你入门,如果你喜欢jade,更多还是要靠你自己查看更多文档;附上我推荐的网址
-        <a href="https://segmentfault.com/a/1190000000357534#articleHeader14">更详细的api,更系统的归类</a>
+        <a href="https://segmentfault.com/a/1190000000357534#articleHeader14" target="_blank">更详细的api,更系统的归类</a>
       </h2>
     </div>
   </div>

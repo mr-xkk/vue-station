@@ -236,7 +236,7 @@
             </pre>
             <p>基本写法就是这样,使用vue自带的transition标签;</p>
             具体详细的用法,还是看github上的更加明白,
-            GitHub地址:<a href="https://github.com/asika32764/vue2-animate">vue2-animate</a>
+            GitHub地址:<a href="https://github.com/asika32764/vue2-animate" target="_blank">vue2-animate</a>
             <button type="button" @click="hide" class="switch">收!收!收起来!!!</button>
           </div>
           </p>

@@ -94,7 +94,7 @@
         </p>
       </div>
       <h2 style="font-size: 1.8rem;text-align: center;line-height: 2.2rem;text-indent: 2em;font-family:华文细黑">当然这些简单的api和介绍是不够的,更多还是要靠你自己查看更多文档;附上我推荐的网址
-        <a href="https://segmentfault.com/a/1190000002712872#articleHeader3">详细API</a>
+        <a href="https://segmentfault.com/a/1190000002712872#articleHeader3" target="_blank">详细API</a>
       </h2>
       <div class="j_card_item">
         <h1 class="title">stylus的使用</h1>

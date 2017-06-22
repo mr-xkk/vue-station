@@ -194,10 +194,10 @@
             <img src="../../static/images/logo.png" alt="">
           </div>
           <ul>
-            <li>联系我吧</li>
-            <li><img src="../../static/images/mail.png" alt="">mail:mr_xkk@163.com</li>
-            <li><img src="../../static/images/qq2.png" alt="">QQ:841-999-283</li>
-            <li><img src="../../static/images/phone.png" alt="">phone:186-5535-3375</li>
+            <li>联系和关注</li>
+            <li><img src="../../static/images/github.png"><a href="https://github.com/mr-xkk" target="_blank" style="color:#fff;letter-spacing:2px;text-decoration:underline;">github地址,源码在此,还有更多项目!</a></li>
+            <li><img src="../../static/images/mail.png">mail:mr_xkk@163.com</li>
+            <li><img src="../../static/images/qq2.png">QQ:841-999-283</li>
           </ul>
           <div class="back_top"  @click="top">
             <img src="../../static/images/top.png" alt="">
@@ -205,7 +205,7 @@
         </div>
       </footer>
     </section>
-  </div>
+  </div>    
 </template>
 
 <script type="es6">
