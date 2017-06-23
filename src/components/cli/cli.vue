@@ -245,5 +245,36 @@
     </div>
   </div>
 </template>
-<script type="es6" src="./cli.js"></script>
+<script type="es6">
+    export default{
+        data (){
+            return {
+                set:false,
+                jq:false,
+                ajax:false,
+                router:false
+          }
+        },
+        methods: {
+          show(){
+            this.set = true
+          },
+          showj(){
+            this.jq = true
+          },
+          showa(){
+            this.ajax = true
+          },
+          showr(){
+            this.router = true
+          },
+          hide(){
+            this.set = false;
+            this.jq = false;
+            this.ajax = false;
+            this.router = false
+          }
+        }
+      }
+</script>
 <style lang="stylus" rel="stylesheet/stylus" src="../public.styl"></style>
