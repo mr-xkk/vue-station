@@ -249,7 +249,7 @@ export default {
     toLeft:() => {
       this.num == 0 ? this.num = 2 : this.num--;
     },
-    toRight: function () {
+    toRight: () => {
       this.num == this.details.length - 1 ? this.num = 0 : this.num++;
     },
     addModel: () => {
