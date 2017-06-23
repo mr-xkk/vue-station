@@ -1,4 +1,4 @@
- import model from './model.vue'
+  import model from './model.vue'
   import registered from './registered.vue'
   import qr from './share/share.vue'
 export default {
@@ -165,8 +165,8 @@ export default {
     }
   },
   components: {
-      model:model,
-      registered:registered,
+      model,
+      registered,
       qr
   }
 };
