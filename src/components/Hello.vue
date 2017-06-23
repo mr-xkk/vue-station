@@ -174,7 +174,7 @@
           <pre>
            通过vue学习ES6语法
 
-            <span>var</span> us go
+            <span>Let</span> us go
 
             to  study some <span>import</span>
 
@@ -235,7 +235,7 @@ export default {
       seamsg:''
     }
   },
-  created: function () {
+  created:function() {
     var _this = this;
 
     function run() {
@@ -246,13 +246,13 @@ export default {
     this.$router.push('jade');
   },
   methods: {
-    toLeft: function () {
+    toLeft:() => {
       this.num == 0 ? this.num = 2 : this.num--;
     },
     toRight: function () {
       this.num == this.details.length - 1 ? this.num = 0 : this.num++;
     },
-    addModel: function () {
+    addModel: () => {
       switch(this == true)
       {
         case 1:this.show = false;
@@ -260,13 +260,13 @@ export default {
       }
       this.show = !this.show
     },
-    showRe: function () {
+    showRe: () => {
       if(this == true){
         this.re = false
       }
       this.re = !this.re
     },
-    jump: function () {
+    jump: () => {
       var jump = document.querySelectorAll('.d_jump')[0];
       var total = jump.offsetTop;
       var distance = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop
@@ -306,14 +306,14 @@ export default {
         }
       }
     },
-    trans:function () {
+    trans:() => {
       this.place = 'translateX(0px)';
     },
-    back:function () {
+    back:() => {
       this.place = 'translateX(-300px)';
       this.incloud = 'translateX(20px)';
     },
-    top:function () {
+    top:() => {
         this.ve = '6666%';
         $('body,html').animate({scrollTop:0},3000);
         $('.back_top').animate({bottom: this.ve},8000);
@@ -321,7 +321,7 @@ export default {
           $('.back_top').animate({bottom: 0},10);
         }
     },
-    change:function (n) {
+    change:(n) => {
      let removeHeight = $('.con_item').eq(n).offset().top-$('.show_list').height();
      $('body,html').animate({scrollTop:removeHeight},1000)
     },
