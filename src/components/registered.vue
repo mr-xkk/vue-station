@@ -2,7 +2,7 @@
   <div id="model" v-if="open">
     <div id="dialog">
       <div class="title">
-        <img src="../../static/images/wrong.png" class="close" @click="close">
+        <img src="../../static/images/wrong.png" class="close" @click="open=!open">
         <h1>注册GuGu</h1>
         <p>不再做艰辛的码农</p>
         <form action="#" method="get">
@@ -21,14 +21,7 @@
         open: true
       }
     },
-    methods: {
-      close: function () {
-        if(this == true){
-          this.open = false
-        }
-        this.open = !this.open
-      }
-    }
+    methods: {}
   }
 </script>
 <style rel="stylesheet/stylus" lang="stylus">
