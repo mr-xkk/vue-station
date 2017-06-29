@@ -183,8 +183,6 @@
         </div>
       </div>
       <!--路由区-->
-      
-    
       <div class="change d_jump">
         <router-link to="/jade" class="module_item"><img src="../../static/images/j1.png" alt="">你好!Jade</router-link>
         <router-link to="/stylus" class="module_item"><img src="../../static/images/s1.png" alt="">你好!stylus</router-link>
