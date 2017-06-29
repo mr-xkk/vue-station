@@ -182,12 +182,19 @@
           </pre>
         </div>
       </div>
+      <!--路由区-->
+      
+    
       <div class="change d_jump">
         <router-link to="/jade" class="module_item"><img src="../../static/images/j1.png" alt="">你好!Jade</router-link>
         <router-link to="/stylus" class="module_item"><img src="../../static/images/s1.png" alt="">你好!stylus</router-link>
         <router-link to="/cli" class="module_item"><img src="../../static/images/vuejs.png" alt="">你好!vue-cli</router-link>
       </div>
-      <router-view></router-view>
+      <!--渲染区-->
+      <transition :name="transitionName">  
+        <router-view class="my-view"></router-view>
+      </transition>
+      <!---->
       <footer class="footer">
         <div class="inner clearfix">
           <div class="pic">
@@ -232,7 +239,8 @@
       ve:'',
       share_move:'',
       show_share:false,
-      seamsg:''
+      seamsg:'',
+      transitionName: 'slide-left'  
     }
   },
   created:function() {
@@ -245,6 +253,15 @@
     setInterval(run, 5000);
     this.$router.push('jade');
   },
+  watch: {  
+      '$route' (to, from) {  
+        if(to.path == '/stylus'){  
+          this.transitionName = 'slide-right';  
+        }else{  
+          this.transitionName = 'slide-left';  
+        }  
+      }  
+    },
   methods: {
     toLeft:() => {
       this.num == 0 ? this.num = 2 : this.num--;
