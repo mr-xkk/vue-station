@@ -36,7 +36,7 @@
         <div class="details">
           <p>
           <h1 class="color_h1">使用vue-cli之前的一些设置</h1>
-          <button type="button" @click="show()" class="switch">点击查看详细内容</button>
+          <button type="button" @click="set=!set" class="switch">点击查看详细内容</button>
           <div class="content" v-if="set">
             <p>首先因为我们在vue-cli里编写是后缀vue的组件,所以在webstorm里是识别不了的,全是黑白的,还没有代码提示不是要我命;
               但这不能拦住我们呀,这时候就需要我们设置了<br>
@@ -46,13 +46,13 @@
             <p>因为我们在vue-cli里面使用的es6的语法;所以我们在script标签里要加上类型</p>
             <code>< script type="es6">< /script></code>
             <p>这样写起来的话就不会有什么阻碍了...还有原谅我是个ide高度依赖者,其他的都基本没用过,没有设置过...</p>
-            <button type="button" @click="hide" class="switch">收!收!收起来!!!</button>
+            <button type="button" @click="set=false" class="switch">收!收!收起来!!!</button>
           </div>
           </p>
         </div>
         <div class="details">
           <h1 class="color_h1">引用jquery</h1>
-          <button type="button" @click="showj" class="switch">点击查看详细内容</button>
+          <button type="button" @click="jq=!jq" class="switch">点击查看详细内容</button>
           <div class="content" v-if="jq">
             <p>
               首先从头开始;我们在我们的<b>package.json</b>的<b>devDependencies</b>中添加依赖
@@ -89,13 +89,13 @@
               })
             </pre>
             然后重新run dev一下;就可以开心的使用了!<br>
-            <button type="button" @click="hide" class="switch">收!收!收起来!!!</button>
+            <button type="button" @click="jq=false" class="switch">收!收!收起来!!!</button>
             </p>
           </div>
       </div>
         <div class="details">
           <h1 class="color_h1">vue封装的ajax方法</h1>
-          <button type="button" @click="showa" class="switch">点击查看详细内容</button>
+          <button type="button" @click="ajax=!ajax" class="switch">点击查看详细内容</button>
           <div class="content" v-if="ajax">
             <p>
               首先ajax是所有前端少不了的东西,所以下面的内容就重要了!!!<br>
@@ -157,13 +157,13 @@
                 因为我测试使用的是聚合的api,然后url只需要/data/someKey这种格式就可以了,但是这样只能在dev环境中运行;
                 <p>以上就是vue-resource的一些基本配置和使用方法</p>
               </p>
-            <button type="button" @click="hide" class="switch">收!收!收起来!!!</button>
+            <button type="button" @click="ajax=false" class="switch">收!收!收起来!!!</button>
             </p>
           </div>
       </div>
         <div class="details">
           <h1 class="color_h1">vue的路由</h1>
-          <button type="button" @click="showr" class="switch">点击查看详细内容</button>
+          <button type="button" @click="router=!router" class="switch">点击查看详细内容</button>
           <div class="content" v-if="router">
             <p>
               vue的路由也是他的一大特色;当然如果我们使用vue-cli的话,因为vue-cli偏向spa,所以他会帮我们创建好路由文件夹<br>
@@ -206,7 +206,7 @@
               ...
             </p>
             </p>
-            <button type="button" @click="hide" class="switch">收!收!收起来!!!</button>
+            <button type="button" @click="router=false" class="switch">收!收!收起来!!!</button>
             </p>
           </div>
         </div>
@@ -217,8 +217,8 @@
         <div class="details">
           <p>
           <h1 class="color_h1">使用Animate.css之前的还是需要npm下载</h1>
-          <button type="button" @click="show()" class="switch">点击查看详细内容</button>
-          <div class="content" v-if="set">
+          <button type="button" @click="animate=!animate" class="switch">点击查看详细内容</button>
+          <div class="content" v-if="animate">
             <p>
               <code>npm install --save vue2-animate</code>
             </p>
@@ -237,7 +237,7 @@
             <p>基本写法就是这样,使用vue自带的transition标签;</p>
             具体详细的用法,还是看github上的更加明白,
             GitHub地址:<a href="https://github.com/asika32764/vue2-animate" target="_blank">vue2-animate</a>
-            <button type="button" @click="hide" class="switch">收!收!收起来!!!</button>
+            <button type="button" @click="animate=false" class="switch">收!收!收起来!!!</button>
           </div>
           </p>
         </div>
@@ -252,28 +252,12 @@
                 set:false,
                 jq:false,
                 ajax:false,
-                router:false
+                router:false,
+                animate:false
           }
         },
         methods: {
-          show(){
-            this.set = true
-          },
-          showj(){
-            this.jq = true
-          },
-          showa(){
-            this.ajax = true
-          },
-          showr(){
-            this.router = true
-          },
-          hide(){
-            this.set = false;
-            this.jq = false;
-            this.ajax = false;
-            this.router = false
-          }
+
         }
       }
 </script>
