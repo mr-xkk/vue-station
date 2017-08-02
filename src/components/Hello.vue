@@ -322,10 +322,10 @@
         }
       }
     },
-    trans : () => {
+    trans : function() {
       this.place = 'translateX(0px)';
     },
-    back : () => {
+    back : function(){
       this.place = 'translateX(-300px)';
       this.incloud = 'translateX(20px)';
     },
@@ -364,15 +364,15 @@
         });
       }
       clearSelection();
-      var searchText = $('#search').val();
-      var regExp = new RegExp(searchText, 'g');
-      var content = $('.j_card_cloud').text();
-      var flag = 0;
-      if (!regExp.test(content)) {
-        alert("没有找到匹配的内容/(ㄒoㄒ)/~~");
-        $('#search').val('');
-        return false;
-      }
+        var searchText = $('#search').val();
+        var regExp = new RegExp(searchText, 'g');
+        var content = $('.j_card_cloud').text();
+        var flag = 0;
+        if (!regExp.test(content)) {
+          alert("没有找到匹配的内容/(ㄒoㄒ)/~~");
+          $('#search').val('');
+          return false;
+        }
       $('.j_card_cloud').find('p').each(function () {
         var html = $(this).html();
         var newHtml = html.replace(regExp, '<i class="highlight">' + searchText + '</i>');
