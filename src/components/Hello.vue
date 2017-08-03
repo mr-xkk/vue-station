@@ -262,10 +262,10 @@
       }  
     },
   methods: {
-    toLeft :() => {
+    toLeft :function() {
       this.num == 0 ? this.num = 2 : this.num--;
     },
-    toRight : () => {
+    toRight :function(){
       this.num == this.details.length - 1 ? this.num = 0 : this.num++;
     },
     addModel : function() {
@@ -277,9 +277,7 @@
       this.show = !this.show
     },
     showRe : function() {
-      if(this == true){
-        this.re = false
-      }
+      
       this.re = !this.re
     },
     jump : () => {
