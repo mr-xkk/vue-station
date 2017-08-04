@@ -2,7 +2,7 @@
 <template>
   <div class="hello">
     <!--share_model-->
-    <qr v-if="show_share"></qr>
+    <qr v-show="count"></qr>
     <section class="nav_list" :style="{transform:place}">
       <ul @click="back">
         <h3>
@@ -41,7 +41,7 @@
       </ul>
     </section>
     <section class="inner_cloud">
-      <!--share-->
+      <!--share显示二维码模态层-->
       <div class="share_window" :style="[{transform:share_move}]">
         <div class="share_details"  @click="share">
           <img src="../../static/images/r5.gif" alt="分享到">
@@ -49,19 +49,19 @@
         <div class="share_content">
           <img src="../../static/images/close5.png" alt="close" class="share_close" @click="share_close">
           <h2>分享网站到...</h2>
-          <div class="share_icon" @click="turn_off">
+          <div class="share_icon" @click="check_this">
             <img src="../../static/images/qq.png" alt="">
             <p>QQ好友</p>
           </div>
-          <div class="share_icon" @click="turn_off">
+          <div class="share_icon" @click="check_this">
             <img src="../../static/images/qqzone.png" alt="">
             <p>QQ空间</p>
           </div>
-          <div class="share_icon" @click="turn_off">
+          <div class="share_icon" @click="check_this">
             <img src="../../static/images/wechat2.png" alt="">
             <p>微信朋友圈</p>
           </div>
-          <div class="share_icon" @click="turn_off">
+          <div class="share_icon" @click="check_this">
             <img src="../../static/images/webo.png" alt="">
             <p>微博</p>
           </div>
@@ -237,7 +237,6 @@
       place:'',
       ve:'',
       share_move:'',
-      show_share:false,
       seamsg:'',
       transitionName: 'slide-left'  
     }
@@ -261,6 +260,12 @@
         }  
       }  
     },
+  //获得二维码页面的vuex状态数据
+  computed: {
+    count () {
+        return this.$store.state.turn_off
+      }
+    },
   methods: {
     toLeft :function() {
       this.num == 0 ? this.num = 2 : this.num--;
@@ -276,8 +281,7 @@
       }
       this.show = !this.show
     },
-    showRe : function() {
-      
+    showRe : function() { 
       this.re = !this.re
     },
     jump : () => {
@@ -343,46 +347,50 @@
         this.share_move = 'translateX(0)';
     },
     share_close(){
-      this.share_move = 'translateX(200px)';
+        this.share_move = 'translateX(200px)';
     },
     turn_off(){
-      this.show_share == true ? this.show_share = false : this.show_share = true;
+        this.show_share == true ? this.show_share = false : this.show_share = true;
     },
+    //切换二维码显示页面的状态
+    check_this(){
+          this.$store.state.turn_off = !this.$store.state.turn_off
+    }, 
     doSearch(){
-      function clearSelection() {
-        if ($('#search').val() == '') {
-          alert('请输入内容');
-          return false;
-        }
-        $('p').each(function () {
-          //找到所有highlight属性的元素；
-          $(this).find('.highlight').each(function () {
-            $(this).replaceWith($(this).html());//将他们的属性去掉；
+        function clearSelection() {
+          if ($('#search').val() == '') {
+            alert('请输入内容');
+            return false;
+          }
+          $('p').each(function () {
+            //找到所有highlight属性的元素；
+            $(this).find('.highlight').each(function () {
+              $(this).replaceWith($(this).html());//将他们的属性去掉；
+            });
           });
-        });
-      }
-      clearSelection();
-        var searchText = $('#search').val();
-        var regExp = new RegExp(searchText, 'g');
-        var content = $('.j_card_cloud').text();
-        var flag = 0;
-        if (!regExp.test(content)) {
-          alert("没有找到匹配的内容/(ㄒoㄒ)/~~");
-          $('#search').val('');
-          return false;
         }
-      $('.j_card_cloud').find('p').each(function () {
-        var html = $(this).html();
-        var newHtml = html.replace(regExp, '<i class="highlight">' + searchText + '</i>');
-        $(this).html(newHtml);
-        flag = 1;
-        $('#search').val('');
-      });
-      if (flag == 1) {
-        let removeHeight = $('.highlight').eq(0).offset().top;
-        $('body,html').animate({scrollTop: removeHeight}, 1000)
-      }
-    },
+        clearSelection();
+          var searchText = $('#search').val();
+          var regExp = new RegExp(searchText, 'g');
+          var content = $('.j_card_cloud').text();
+          var flag = 0;
+          if (!regExp.test(content)) {
+            alert("没有找到匹配的内容/(ㄒoㄒ)/~~");
+            $('#search').val('');
+            return false;
+          }
+        $('.j_card_cloud').find('p').each(function () {
+          var html = $(this).html();
+          var newHtml = html.replace(regExp, '<i class="highlight">' + searchText + '</i>');
+          $(this).html(newHtml);
+          flag = 1;
+          $('#search').val('');
+        });
+        if (flag == 1) {
+          let removeHeight = $('.highlight').eq(0).offset().top;
+          $('body,html').animate({scrollTop: removeHeight}, 1000)
+        }
+      },
     keySearch(ev){
         if(ev.keyCode==13){
             this.doSearch();

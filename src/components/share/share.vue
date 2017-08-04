@@ -1,5 +1,5 @@
 <template>
-  <div class="share_model" v-show="turn_off" @click="turn_off=false">
+  <div class="share_model" v-show="count" @click="check_this">
     <div class="qr_code">
       <img src="../../../static/images/two.png" alt="二维码">
       <p>分享二维码给好友</p>
@@ -10,13 +10,18 @@
   export default{
       data(){
           return{
-            turn_off:true
+            
           }
       },
+      computed: {
+        count () {
+            return this.$store.state.turn_off
+        }
+      },
       methods:{
-         to_off(){
-             this.turn_off==true? this.turn_off = false: this.turn_off = true;
-         }
+        check_this(){
+          this.$store.state.turn_off = !this.$store.state.turn_off
+        }    
       }
   }
 </script>
